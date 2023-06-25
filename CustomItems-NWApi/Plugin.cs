@@ -1,5 +1,5 @@
-﻿using System;
-using PluginAPI.Core.Items;
+﻿
+using PluginAPI.Events;
 
 namespace CustomItems_NWApi
 {
@@ -7,6 +7,8 @@ namespace CustomItems_NWApi
     using PluginAPI.Core.Attributes;
     using PluginAPI.Enums;
     using Configs;
+    using Factory;
+    using PluginAPI.Core.Factories;
     
     public class Plugin
     {
@@ -19,14 +21,18 @@ namespace CustomItems_NWApi
 
         [PluginConfig] public Config Config;
 
+        [PluginPriority(LoadPriority.Highest)]
         [PluginEntryPoint(Name, Version, "Custom Items API for NW Plugin System", "Deepfried-Chips, SwiftKraft")]
         private void Load()
         {
             Singleton = this;
+            Handler = PluginHandler.Get(this);
             Log.Info("Hello from Custom Items", Name);
-            
+
+            FactoryManager.RegisterPlayerFactory(this, new CiPlayerFactory());
+            EventManager.RegisterEvents(this);
         }
-        
-        
+
+        public PluginHandler Handler;
     }
 }

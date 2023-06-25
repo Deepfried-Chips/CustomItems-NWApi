@@ -1,10 +1,13 @@
 ﻿using System;
 using CommandSystem;
 using CustomItems_NWApi.Commands.Sub;
+using CustomItems_NWApi.Factory;
+using PluginAPI.Core;
 
 namespace CustomItems_NWApi.Commands
 {
     [CommandHandler(typeof(RemoteAdminCommandHandler))]
+    [CommandHandler(typeof(GameConsoleCommandHandler))]
     public class CustomItemParent : ParentCommand
     {
         public override string Command { get; } = "customitems";
@@ -22,6 +25,7 @@ namespace CustomItems_NWApi.Commands
         { 
             RegisterCommand(new Reload());
             RegisterCommand(new Give());
+            RegisterCommand(new Drop());
         }
 
         protected override bool ExecuteParent(ArraySegment<string> arguments, ICommandSender sender, out string response)

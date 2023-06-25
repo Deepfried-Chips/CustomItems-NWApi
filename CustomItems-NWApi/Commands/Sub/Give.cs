@@ -5,6 +5,8 @@ using PluginAPI.Core;
 
 namespace CustomItems_NWApi.Commands.Sub
 {
+    
+    
     public class Give : ICommand
     {
         public string Command { get; } = "give";
@@ -15,14 +17,14 @@ namespace CustomItems_NWApi.Commands.Sub
 
         public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
         {
-            Log.Info(arguments.At(0), Plugin.Name);
             if (arguments.Count < 2)
             {
                 response = "Usage: <player> <item>";
                 return false;
             }
-            Player player = CustomItemsPlayer.Get(arguments.At(0));
-            if (player == null)
+
+            Player ply = Helpers.GetPlayer(arguments.At(0));
+            if (ply == null)
             {
                 response = "Couldn't find player!";
                 return false;

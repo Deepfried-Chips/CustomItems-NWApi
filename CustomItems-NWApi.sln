@@ -8,9 +8,9 @@ Global
 		Debug|x64 = Debug|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1EA7DEF4-149D-45EC-BB77-97013F28ADBA}.Release|x64.ActiveCfg = Release|x64
-		{1EA7DEF4-149D-45EC-BB77-97013F28ADBA}.Release|x64.Build.0 = Release|x64
 		{1EA7DEF4-149D-45EC-BB77-97013F28ADBA}.Debug|x64.ActiveCfg = Debug|x64
 		{1EA7DEF4-149D-45EC-BB77-97013F28ADBA}.Debug|x64.Build.0 = Debug|x64
+		{1EA7DEF4-149D-45EC-BB77-97013F28ADBA}.Release|x64.ActiveCfg = Release|x64
+		{1EA7DEF4-149D-45EC-BB77-97013F28ADBA}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 EndGlobal
