@@ -59,11 +59,14 @@
         <Compile Include="Commands\Sub\Reload.cs" />
         <Compile Include="Configs\Config.cs" />
         <Compile Include="Configs\ConfigHandler.cs" />
+        <Compile Include="Events\Hints.cs" />
+        <Compile Include="Events\Wrapper.cs" />
         <Compile Include="Factory\CiPlayer.cs" />
         <Compile Include="Factory\CiPlayerFactory.cs" />
         <Compile Include="Helpers.cs" />
         <Compile Include="Plugin.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Types\CustomItem.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="App.config" />

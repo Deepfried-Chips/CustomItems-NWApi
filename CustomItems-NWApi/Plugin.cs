@@ -8,6 +8,7 @@ namespace CustomItems_NWApi
     using PluginAPI.Enums;
     using Configs;
     using Factory;
+    using Events;
     using PluginAPI.Core.Factories;
     
     public class Plugin
@@ -15,11 +16,11 @@ namespace CustomItems_NWApi
 
         public const string Name = "CustomItems";
 
-        public const string Version = "0.0.1-alpha";
+        public const string Version = "0.0.2-alpha";
         
         public static Plugin Singleton { get; private set; }
 
-        [PluginConfig] public Config Config;
+        [PluginConfig] public Config PluginConfig;
 
         [PluginPriority(LoadPriority.Highest)]
         [PluginEntryPoint(Name, Version, "Custom Items API for NW Plugin System", "Deepfried-Chips, SwiftKraft")]
@@ -30,9 +31,11 @@ namespace CustomItems_NWApi
             Log.Info("Hello from Custom Items", Name);
 
             FactoryManager.RegisterPlayerFactory(this, new CiPlayerFactory());
-            EventManager.RegisterEvents(this);
+            EventManager.RegisterEvents<Wrapper>(this);
+            EventManager.RegisterEvents<Hints>(this);
         }
 
         public PluginHandler Handler;
+        
     }
 }

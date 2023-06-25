@@ -1,5 +1,6 @@
 ﻿using PluginAPI.Core.Factories;
 using System;
+using PluginAPI.Core;
 using PluginAPI.Core.Interfaces;
 
 namespace CustomItems_NWApi.Factory
@@ -8,6 +9,6 @@ namespace CustomItems_NWApi.Factory
     {
         public override Type BaseType { get; } = typeof(CiPlayer);
         
-        public override IPlayer Create(IGameComponent component) => new CiPlayer(component);
+        public override Player Create(IGameComponent component) => new CiPlayer(component);
     }
 }

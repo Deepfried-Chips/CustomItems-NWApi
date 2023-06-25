@@ -4,7 +4,7 @@
     {
         public static void ReloadConfig()
         {
-            Plugin.Singleton.Handler.LoadConfig(Plugin.Singleton, nameof(Plugin.Config));
+            Plugin.Singleton.Handler.LoadConfig(Plugin.Singleton, nameof(Plugin.PluginConfig));
         }
     }
 }
