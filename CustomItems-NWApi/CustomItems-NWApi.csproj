@@ -33,15 +33,15 @@
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="mscorlib" />
-        <Reference Include="PluginAPI, Version=12.0.0.0, Culture=neutral, processorArchitecture=Amd64">
-          <HintPath>..\packages\Northwood.PluginAPI.12.0.0\lib\net48\PluginAPI.dll</HintPath>
+        <Reference Include="PluginAPI, Version=13.1.0.0, Culture=neutral, processorArchitecture=Amd64">
+          <HintPath>..\packages\Northwood.PluginAPI.13.1.0\lib\net48\PluginAPI.dll</HintPath>
         </Reference>
         <Reference Include="System" />
         <Reference Include="System.Core" />
         <Reference Include="System.Data" />
         <Reference Include="System.Xml" />
         <Reference Include="NorthwoodLib" HintPath="$(SL_ASSEMBLY)\NorthwoodLib.dll" />
-        <Reference Include="Assembly-CSharp" HintPath="$(SL-PLUGINREFERENCES)\Assembly-CSharp-13.1.dll" />
+        <Reference Include="Assembly-CSharp" HintPath="$(SL-PLUGINREFERENCES)\Assembly-CSharp-13.1.1.dll" />
         <Reference Include="Assembly-CSharp-firstpass" HintPath="$(SL-ASSEMBLY)\Assembly-CSharp-firstpass.dll" />
         <Reference Include="CommandSystem.Core" HintPath="$(SL-ASSEMBLY)\CommandSystem.Core.dll" />
         <Reference Include="Mirror" HintPath="$(SL-PLUGINREFERENCES)\Mirror-13.1.dll" />
@@ -63,18 +63,17 @@
         <Compile Include="Events\Wrapper.cs" />
         <Compile Include="Factory\CiPlayer.cs" />
         <Compile Include="Factory\CiPlayerFactory.cs" />
+        <Compile Include="Firearm\FirearmHandler.cs" />
         <Compile Include="Helpers.cs" />
+        <Compile Include="Item\ItemHandler.cs" />
         <Compile Include="Plugin.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Types\CustomFirearm.cs" />
         <Compile Include="Types\CustomItem.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="App.config" />
       <None Include="packages.config" />
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="Firearm\" />
-      <Folder Include="Item\" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

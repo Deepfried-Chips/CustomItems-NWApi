@@ -8,5 +8,7 @@
         public CiPlayer(IGameComponent component) : base(component)
         {
         }
+        
+        
     }
 }
